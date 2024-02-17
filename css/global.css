@@ -1,0 +1,96 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*-----------------------------------*\
+    # CSS Reset
+\*-----------------------------------*/
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*-----------------------------------*\
+    # Custom Variables
+\*-----------------------------------*/
+
+:root {
+    --web-dark: #212121;
+    --web-light: #ADFF45;
+    --web-light-darker: #81bc34;
+}
+
+/*-----------------------------------*\
+    # Custom Classes
+\*-----------------------------------*/
+
+.web-light {
+    color: var(--web-light);
+}
+
+.btn-web {
+    color: var(--web-dark);
+    background-color: var(--web-light);
+    border: 1px solid var(--web-light);
+    padding: 0 1rem;
+    border-radius: 4px;
+}
+
+.btn-web:hover {
+    background-color: var(--web-light-darker);
+    border-color: var(--web-light-darker);
+}
+
+.btn-outline-web {
+    color: var(--web-light);
+    background-color: var(--web-dark);
+    border:1px solid var(--web-light);
+    padding: 0 1rem;
+    border-radius: 4px;
+}
+
+.btn-outline-web:hover {
+    color: var(--web-dark);
+    background-color: var(--web-light);
+}
+
+.search-input {
+    color: var(--web-dark);
+    background-color: var(--web-light);
+}
+
+.search-input:focus {
+    background-color: var(--web-light);
+    outline: none;
+    box-shadow: none;
+}
+
+/* Modal */
+
+.modal-box {
+    /* border: 2px solid red; */
+    width: 100%;
+}
+
+.modal-box a img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+
+.modal-box a img:hover {
+    opacity: 0.7;
+}
+
+.modal-link {
+    /* font-size: 1rem; */
+    color: var(--web-light);
+    text-decoration: none;
+}
