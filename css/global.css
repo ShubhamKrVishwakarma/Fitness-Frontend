@@ -56,6 +56,7 @@
   display: inline-block;
   text-align: center;
   transition: all 300ms ease;
+  text-decoration: none;
 }
 
 .btn-violet:hover {
@@ -78,6 +79,7 @@
   color: #64748b;
   background-color: #f1f5f9;
   border: 1px solid #cdd0d4;
+  text-decoration: none;
 }
 
 .btn-light:hover {
