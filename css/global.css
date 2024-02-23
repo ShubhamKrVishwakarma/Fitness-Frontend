@@ -15,6 +15,7 @@
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
+  text-decoration: none;
 }
 
 /*-----------------------------------*\
@@ -30,10 +31,24 @@
   --bg-violet-dark: #7634d9;
 }
 
+.violet {
+    font-size: 1rem;
+    color: var(--bg-violet);
+    font-weight: 500;
+    transition: all .15s ease-in-out;
+}
+
 .gray {
     font-size: 1rem;
     color: var(--gray);
     font-weight: 600;
+    transition: all .15s ease-in-out;
+}
+
+.gray:hover {
+  color: #fff;
+  background-color: #334155;
+  border-radius: 6px;
 }
 
 /*-----------------------------------*\
@@ -49,9 +64,7 @@
   border: 1px solid #8b3dff;
   outline: none;
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.15),
-    0 1px 1px rgba(2, 6, 23, 0.075);
+  border-radius: 0.6rem;
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -69,16 +82,14 @@
   line-height: 1.5;
   outline: none;
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.15),
-    0 1px 1px rgba(2, 6, 23, 0.075);
+  border-radius: 0.6rem;
   cursor: pointer;
   display: inline-block;
   text-align: center;
   transition: all 300ms ease;
   color: #64748b;
   background-color: #f1f5f9;
-  border: 1px solid #cdd0d4;
+  border: 1px solid #f1f5f9;
   text-decoration: none;
 }
 
@@ -93,6 +104,8 @@
 
 .header {
     border-bottom: 1px solid var(--gray);
+    z-index: 10;
+    background-color: #020617;
 }
 
 .cart i {
@@ -151,4 +164,27 @@
     font-weight: 600;
     text-decoration: none;
     color: #7634d9;
+}
+
+/* Footer */
+.footer {
+    background-color: #020617;
+    color: var(--gray);
+}
+
+.footer-heading {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-body a,
+.footer-body i {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gray);
+}
+
+.footer-body a:hover,
+.footer-body i:hover {
+    color: var(--bg-violet);
 }
