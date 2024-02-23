@@ -588,6 +588,7 @@ main .container .left .profile {
     padding: 3rem;
     border-radius: var(--card-border-radius);
     width: 50%;
+    box-shadow: 0 0 1rem var(--color-primary);
 }
 
 .customize-theme .card p {
@@ -760,6 +761,10 @@ main .container .left .profile {
     .left .btn {
         display: none;
     }
+
+    .customize-theme .card {
+        width: 80vw;
+    }
 }
 
 /*-----------------------------------*\
@@ -803,5 +808,9 @@ main .container .left .profile {
 
     main .container .right {
         display: none;
+    }
+
+    .customize-theme .card {
+        width: 90vw;
     }
 }
