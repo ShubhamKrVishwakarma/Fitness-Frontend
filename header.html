@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/color.css">
 </head>
 
 <body>
@@ -16,8 +17,8 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg w-100 navbar-clone fixed">
             <div class="container px-3">
-                <a class="navbar-brand" href="">
-                    <h3 class="text-dark m-0">eFitLab</h3>
+                <a class="navbar-brand" href="./header.html">
+                    <h3 class="m-0">eFitLab</h3>
                 </a>
                 <button class="navbar-toggler offcanvas-nav-btn" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" type="button">
@@ -25,35 +26,44 @@
                 </button>
                 <div class="offcanvas offcanvas-start offcanvas-nav" id="offcanvasNavbar" style="width: 100%">
                     <div class="offcanvas-header">
-                        <a class="navbar-brand" href="">
-                            <h3 class="text-dark m-0">eFitLab</h3>
+                        <a class="navbar-brand" href="./header.html">
+                            <h3 class="m-0">eFitLab</h3>
                         </a>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+                        <button class="close-sidebar" data-bs-dismiss="offcanvas">
+                            <!-- <i class="bi bi-x-lg"></i> -->
+                            <i class="bi bi-x-square-fill"></i>
+                        </button>
                     </div>
                     <div class="offcanvas-body pt-0 align-items-center">
                         <ul class="navbar-nav mx-auto align-items-lg-center gap-2">
                             <!-- After Login -->
-                            <!-- <li class="nav-item d-block d-lg-none">
-                <a href="./profile.html" class="d-flex align-items-center link-body-emphasis text-decoration-none">
-                  <img src="https://github.com/mdo.png" alt="User" width="40" height="40" class="rounded-circle">
-                  <h3 class="m-0 ms-2">Username</h3>
-                </a>
-              </li>
-              <li class="nav-item d-block d-lg-none">
-                <a class="nav-link" href="./messages.html">Messages</a>
-              </li>
-              <li class="nav-item d-block d-lg-none">
-                <a class="nav-link" href="./cart.html">My Cart</a>
-              </li>
-              <li class="nav-item d-block d-lg-none">
-                <a class="nav-link" href="./orders.html">My Orders</a>
-              </li>
-              <li class="nav-item d-block d-lg-none">
-                <a class="nav-link" href="#">Log out</a>
-              </li>
-              <li class="nav-item d-block d-lg-none">
-                <h3>Nav Links</h3>
-              </li> -->
+                            <li class="nav-item d-block d-lg-none">
+                                <a href="./profile.html"
+                                    class="d-flex align-items-center link-body-emphasis text-decoration-none sidebar-profile">
+                                    <img src="https://github.com/mdo.png" alt="User" width="40" height="40"
+                                        class="rounded-circle">
+                                    <h3 class="m-0 ms-2">Username</h3>
+                                </a>
+                            </li>
+                            <li class="nav-item d-block d-lg-none">
+                                <a class="nav-link" href="./messages.html">Messages</a>
+                            </li>
+                            <li class="nav-item d-block d-lg-none">
+                                <a class="nav-link" href="./cart.html">My Cart</a>
+                            </li>
+                            <li class="nav-item d-block d-lg-none">
+                                <a class="nav-link" href="./orders.html">My Orders</a>
+                            </li>
+                            <li class="nav-item d-block d-lg-none">
+                                <a class="nav-link" href="#">Log out</a>
+                            </li>
+                            <li class="sidebar-profile">
+                                <hr class="m-0">
+                            </li>
+                            <li class="nav-item d-block d-lg-none sidebar-profile">
+                                <h3>Nav Links</h3>
+                            </li>
                             <!-- Guest -->
                             <li class="nav-item">
                                 <a class="nav-link" href="./home.html">Home</a>
@@ -72,7 +82,7 @@
                                     <!-- Begineer -->
                                     <a class="dropdown-item text-body py-3" href="">
                                         <div class="d-flex align-items-center">
-                                            <i class="bi bi-file-text fs-4 text-primary"></i>
+                                            <i class="bi bi-file-text fs-4"></i>
                                             <div class="ms-3 lh-1">
                                                 <h6 class="mb-1">Beginner</h6>
                                                 <p class="mb-0 fs-6">No workout Experience</p>
@@ -83,7 +93,7 @@
                                     <!-- Intermediate -->
                                     <a class="dropdown-item text-body py-3" href="">
                                         <div class="d-flex align-items-center">
-                                            <i class="bi bi-clipboard fs-4 text-primary"></i>
+                                            <i class="bi bi-clipboard fs-4"></i>
                                             <div class="ms-3 lh-1">
                                                 <h6 class="mb-1">
                                                     Intermediate
@@ -97,7 +107,7 @@
                                     <!-- Advanced -->
                                     <a class="dropdown-item text-body py-3" href="">
                                         <div class="d-flex align-items-center">
-                                            <i class="bi bi-clipboard fs-4 text-primary"></i>
+                                            <i class="bi bi-clipboard fs-4"></i>
                                             <div class="ms-3 lh-1">
                                                 <h6 class="mb-1">
                                                     Advanced
@@ -118,26 +128,31 @@
                         </ul>
 
                         <!-- Action Buttons -->
-                        <div class="d-flex flex-column flex-lg-row gap-2 mt-2 mt-lg-0">
-                            <a href="./login.html" class="btn-light">Login</a>
-                            <button class="btn-violet" data-bs-toggle="modal"
+                        <!-- <div class="d-flex flex-column flex-lg-row gap-2 mt-2 mt-lg-0">
+                            <a href="./login.html" class="btn-outline-primary text-center">Login</a>
+                            <button class="btn-primary" data-bs-toggle="modal"
                                 data-bs-target="#registerModal">Register</button>
-                        </div>
+                        </div> -->
 
                         <!-- User Profile -->
-                        <!-- <div class="dropdown text-end d-none d-lg-block">
-              <a href="./profile.html" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="https://github.com/mdo.png" alt="User" width="40" height="40" class="rounded-circle">
-              </a>
-              <ul class="dropdown-menu text-small me-4">
-                <li><a class="dropdown-item" href="./profile.html">Profile</a></li>
-                <li><a class="dropdown-item" href="./messages.html">Messages</a></li>
-                <li><a class="dropdown-item" href="./cart.html">My Cart</a></li>
-                <li><a class="dropdown-item" href="./orders.html">My Orders</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Log out</a></li>
-              </ul>
-            </div> -->
+                        <div class="dropdown text-end d-none d-lg-block profile-dropdown">
+                            <a href="./profile.html"
+                                class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://github.com/mdo.png" alt="User" width="40" height="40"
+                                    class="rounded-circle">
+                            </a>
+                            <ul class="dropdown-menu text-small me-4">
+                                <li><a class="dropdown-item" href="./profile.html">Profile</a></li>
+                                <li><a class="dropdown-item" href="./messages.html">Messages</a></li>
+                                <li><a class="dropdown-item" href="./cart.html">My Cart</a></li>
+                                <li><a class="dropdown-item" href="./orders.html">My Orders</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Log out</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
