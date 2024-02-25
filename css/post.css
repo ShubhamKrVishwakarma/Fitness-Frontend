@@ -1,75 +1,7 @@
-/* .profile-photo {
-    width: 2.7rem;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.feeds img {
-    display: block;
-    width: 100%;
-}
-
-.feeds .feed {
-    background: hsl(252, 30%, 100%);
-    border-radius: 1rem;
-    padding: 1rem;
-    margin: 1rem 0;
-    font-size: 0.85rem;
-    line-height: 1.5;
-}
-
-.feed .head {
-    display: flex;
-    justify-content: space-between;
-}
-
-.feed .user {
-    display: flex;
-    gap: 1rem;
-}
-
-.feed .photo {
-    border-radius: 1rem;
-    overflow: hidden;
-    margin: 0.7rem 0;
-}
-
-.feed .action-buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.4rem;
-    margin: 0.6rem;
-}
-
-.feeds .liked-by {
-    display: flex;
-}
-
-.feeds .liked-by span {
-    width: 1.4rem;
-    height: 1.4rem;
-    display: block;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid hsl(252, 30%, 100%);
-    margin-left: -0.6rem;
-}
-
-.feeds .liked-by span:first-child {
-    margin: 0;
-}
-
-.feeds .liked-by p {
-    margin-left: 0.5rem;
-} */
-
 /* Posts */
 
 .posts .post {
     padding: 1rem;
-    /* margin: 1rem 0; */
 }
 
 .post .post-head {
@@ -126,6 +58,8 @@
     padding: 0 0.5rem;
 }
 
+
+
 /* Comment Section */
 
 .comment-head {
@@ -171,6 +105,7 @@
 }
 
 #comment-card {
-    max-height: 749px;
+    /* max-height: 749px; */
+    max-height: 724px;
     overflow-y: auto;
 }
