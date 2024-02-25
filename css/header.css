@@ -271,3 +271,9 @@
 .border-bottom {
     border-bottom: 1px solid gray;
 }
+
+@media screen and (max-width: 800px) {
+    .swiper-wrapper {
+        flex-direction: column;
+    }
+}
