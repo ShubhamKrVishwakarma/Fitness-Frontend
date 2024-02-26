@@ -109,3 +109,17 @@
     max-height: 724px;
     overflow-y: auto;
 }
+
+/* Queries */
+
+.table td, .table th {
+    white-space: normal;
+}
+
+.query-table table {
+    overflow-x: auto;
+}
+
+.query-table table tbody td {
+    padding: 0.7rem 1.5rem;
+}
