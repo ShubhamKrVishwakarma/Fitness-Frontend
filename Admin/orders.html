@@ -24,7 +24,9 @@
   <!-- data-color -> primary, dark, info, success, warning, danger -->
   <!-- bg-default, bg-white -->
   <!-- Side NAV -->
-  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 ps bg-default" id="sidenav-main" data-color="primary">
+  <aside
+    class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 ps bg-default"
+    id="sidenav-main" data-color="primary">
     <div class="sidenav-header">
       <!-- <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
         aria-hidden="true" id="iconSidenav"></i> -->
@@ -325,15 +327,18 @@
       </div>
       <!-- Sinle Order Inforamtaion -->
       <div class="row">
-        <div class="col-md-12 mt-4">
+        <!-- Order Details -->
+        <div class="col-md-8 mt-4">
           <div class="card">
             <div class="card-header pb-0 px-3 d-flex justify-content-between align-items-center">
               <div>
                 <h6 class="mb-0">Order Information</h6>
               </div>
               <div class="text-end">
-                <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i class="far fa-trash-alt me-2" aria-hidden="true"></i>Cancel</a>
-                <a class="btn btn-link text-success text-gradient px-3 mb-0" href="javascript:;"><i class="fa-solid fa-circle-check"></i> Confirm</a>
+                <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i
+                    class="far fa-trash-alt me-2" aria-hidden="true"></i>Cancel</a>
+                <a class="btn btn-link text-success text-gradient px-3 mb-0" href="javascript:;"><i
+                    class="fa-solid fa-circle-check"></i> Confirm</a>
               </div>
             </div>
             <div class="card-body pt-4 p-3">
@@ -372,6 +377,8 @@
                           class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
                       <span class="mb-1 text-xs">Product Name: <span
                           class="text-dark font-weight-bold ms-sm-2">Dumbell</span></span>
+                      <span class="mb-1 text-xs">Category: <span
+                          class="text-dark font-weight-bold ms-sm-2">Equipment</span></span>
                       <span class="mb-1 text-xs">Quantity: <span
                           class="text-danger ms-sm-1 font-weight-bold">12</span></span>
                       <span class="mb-1 text-xs">Available Quantity: <span
@@ -392,6 +399,8 @@
                           class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
                       <span class="mb-1 text-xs">Product Name: <span
                           class="text-dark font-weight-bold ms-sm-2">Dumbell</span></span>
+                      <span class="mb-1 text-xs">Category: <span
+                          class="text-dark font-weight-bold ms-sm-2">Equipment</span></span>
                       <span class="mb-1 text-xs">Quantity: <span
                           class="text-danger ms-sm-1 font-weight-bold">12</span></span>
                       <span class="mb-1 text-xs">Available Quantity: <span
@@ -412,6 +421,8 @@
                           class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
                       <span class="mb-1 text-xs">Product Name: <span
                           class="text-dark font-weight-bold ms-sm-2">Dumbell</span></span>
+                      <span class="mb-1 text-xs">Category: <span
+                          class="text-dark font-weight-bold ms-sm-2">Equipment</span></span>
                       <span class="mb-1 text-xs">Quantity: <span
                           class="text-danger ms-sm-1 font-weight-bold">12</span></span>
                       <span class="mb-1 text-xs">Available Quantity: <span
@@ -426,8 +437,52 @@
               <hr class="m-0 bg-secondary">
               <div class="pt-2">
                 <h6 class="m-0 ps-4">Total Amount: <span class="text-success ms-sm-1 font-weight-bold"><i
-                  class="fa-solid fa-indian-rupee-sign"></i> 450</span></h6>
+                      class="fa-solid fa-indian-rupee-sign"></i> 450</span></h6>
               </div>
+            </div>
+          </div>
+        </div>
+        <!-- User Details -->
+        <div class="col-md-4 mt-4">
+          <div class="card mb-3">
+            <div class="card-header p-3">
+                <h6 class="mb-0">Customer Details</h6>
+            </div>
+            <hr class="m-0 bg-secondary">
+            <div class="card-body p-3">
+              <!-- User Info  -->
+              <div class="d-flex">
+                <div>
+                  <img src="../images/team-3.jpg" class="avatar avatar-sm me-3" alt="user1">
+                </div>
+                <div class="d-flex flex-column justify-content-center">
+                  <h6 class="mb-0 text-sm">John Michael</h6>
+                  <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
+                </div>
+              </div>
+              <div>
+                <span class="text-success d-block py-2 fs-5 mb-0"><i class="fa-solid fa-cart-shopping"></i> 12 Orders</span>
+              </div>
+              <div>
+                <h6 class="m-0">Contact Info:</h6>
+                <p class="m-0 text-sm mb-1"><b>Email:</b> test@gmail.com</p>
+                <p class="m-0 text-sm"><b>Mobile:</b> +91 8987567865</p>
+              </div>
+              <!-- Shipping Info -->
+            </div>
+          </div>
+          <!-- Shipping Address -->
+          <div class="card mb-3">
+            <div class="card-body p-3">
+                <h6 class="mb-0 px-1 py-2">Shipping Address</h6>
+                <p class="text-sm text-secondary m-0 px-1 pt-1 pb-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur aliquid quia itaque esse quibusdam unde nam eaque? Vero fugit, possimus corporis pariatur autem amet natus vel aliquam! Tempora, quo molestias.</p>
+            </div>
+          </div>
+          <!-- Payment Inforamtaion -->
+          <div class="card mb-3">
+            <div class="card-body p-3">
+                <h6 class="mb-0 px-1 py-2">Payment Details</h6>
+                <p class="text-sm text-secondary m-0 px-1 pt-1 pb-2">Payment Type: COD</p>
             </div>
           </div>
         </div>
