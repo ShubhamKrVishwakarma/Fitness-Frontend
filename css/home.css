@@ -14,6 +14,10 @@ body {
     border-bottom: 2px solid hsl(0, 0%, 100%);
 }
 
+.hr {
+    color: #fff;
+}
+
 .dropdown-toggle::after {
     color: #fff;
 }
@@ -262,7 +266,6 @@ body {
     justify-content: center;
     width: 560px;
 }
-
 
 /* responsive */
 
