@@ -18,12 +18,43 @@
   text-decoration: none;
 }
 
+.btn-white {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer!important;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.btn-white:hover {
+    opacity: 0.8;
+}
+
+.btn-outline-white {
+    color: #fff;
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.btn-outline-white:hover {
+    opacity: 0.8;
+}
+
 /*-----------------------------------*\
     # Header
 \*-----------------------------------*/
 
 .header {
-    z-index: 10;
+    color: #fff;
+    background-color: #000;
 }
 
 .close-sidebar {
@@ -113,8 +144,8 @@
 
 .banner-body {
     position: absolute;
-    top: 34%;
-    left: 5%;
+    top: 32%;
+    left: 10%;
 }
 
 .banner-body h1 {
