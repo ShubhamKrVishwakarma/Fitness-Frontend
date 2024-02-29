@@ -75,6 +75,10 @@ header ul {
     list-style: none;
 }
 
+header ul li{
+    align-self: center;
+}
+
 .logo {
     display: flex;
 }
@@ -201,7 +205,6 @@ header ul {
     width: 100%;
     background-color: var(--input-bg);
     padding: 1.5rem 1.35rem calc(0.75rem - 2px) 1.35rem;
-    /* calc(0.75rem - 2px) - It can also be written as 0.625 rem*/
     border: none;
     outline: none;
     font-family: inherit;
@@ -276,17 +279,21 @@ textarea.contact-input~.icon {
 }
 
 .contact-buttons {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 1rem;
     margin-top: 1rem;
     width: 100%;
-    grid-column: span 2;
+    grid-column: span 2; */
+    display: grid;
+    place-items: center; 
+    margin-top: 1rem;
+    width: 100%;
 }
 
 .btn {
     display: inline-block;
-    padding: 1.1rem 2rem;
+    padding: 1.4rem 5rem;
     background-color: var(--main-color);
     color: #fff;
     border-radius: 40px;
@@ -302,7 +309,7 @@ textarea.contact-input~.icon {
     background-color: var(--main-color-hover);
 }
 
-.btn.btn.upload {
+/* .btn.btn.upload {
     position: relative;
     background-color: var(--input-bg);
 }
@@ -324,7 +331,7 @@ textarea.contact-input~.icon {
     left: 0;
     cursor: pointer;
     opacity: 0;
-}
+} */
 
 .right {
     display: grid;
