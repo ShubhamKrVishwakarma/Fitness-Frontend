@@ -45,7 +45,7 @@
 /* section-1 */
 
 #banner-1 {
-    margin-top: 5rem;
+    margin-top: 8rem;
     flex-wrap: wrap-reverse;
     justify-content: space-between;
 }
@@ -269,6 +269,10 @@
 /* responsive */
 
 @media(max-width:910px) {
+    #banner-1{
+        margin-top: 4rem !important;
+    }
+
     #banner-1 .content {
         width: 100%;
     }
@@ -379,7 +383,7 @@
 
 .animate-2 {
     position: relative;
-    transform: translateX(-100px);
+    transform: translateX(-50px);
     opacity: 0;
     transition: 1.6s all ease-in-out;
 }
@@ -391,7 +395,7 @@
 
 .animate-3 {
     position: relative;
-    transform: translateX(100px);
+    transform: translateX(50px);
     opacity: 0;
     transition: 1.6s all ease-in-out;
 }
