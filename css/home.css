@@ -1,0 +1,429 @@
+@import url(global.css);
+
+
+:root {
+    --main-color: #29a396;
+    --primary-color: black;
+}
+
+#hmbody {
+    background-color: var(--primary-color);
+    /* background: -webkit-radial-gradient(50% 50%, ellipse cover, var(--main-color) -500%, black); */
+    color: white;
+}
+
+.banner {
+    max-width: 1200px;
+    display: flex;
+    margin-bottom: 5rem;
+}
+
+.banner-button button {
+    background-color: var(--main-color);
+    color: black;
+    width: fit-content !important;
+    font-weight: 600;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading h2 {
+    color: var(--main-color);
+    padding-bottom: 20px;
+}
+
+/* section-1 */
+
+#banner-1 {
+    margin-top: 5rem;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+}
+
+#banner-1 .content {
+    width: 60%;
+    min-width: 40%;
+}
+
+#banner-1 .content h4 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    /* color: var(--main-color); */
+}
+
+#banner-1 .content h1 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+#banner-1 .content h1 {
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 6rem;
+    color: var(--white);
+}
+
+#banner-1 .image {
+    display: flex;
+    justify-content: center;
+}
+
+#banner-1 .image img {
+    max-width: 350px;
+    margin: auto;
+}
+
+/* section-2 */
+
+#banner-2 {
+    flex-direction: column;
+    gap: 70px;
+}
+
+#banner-2 .content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#banner-2 .image {
+    width: 350px;
+    height: 170px;
+    border-radius: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#banner-2 .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    opacity: 0.5;
+}
+
+#banner-2 .image span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+
+#banner-2 .banner-button {
+    display: flex;
+    justify-content: center;
+}
+
+#banner-2 .banner-button button {
+    background-color: var(--main-color);
+    color: #111317;
+    font-weight: 600;
+    height: 45px;
+    width: 150px;
+}
+
+/* section-3 */
+
+#banner-3 {
+    flex-direction: column;
+}
+
+#banner-3 .image {
+    width: inherit;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+#banner-3 .image img {
+    width: inherit;
+    opacity: 0.6;
+    border-radius: 10px;
+}
+
+#banner-3 .image span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+}
+
+#banner-3 .content-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#banner-3 .content-links .image-link {
+    width: 45%;
+    height: 320px;
+    /* border: solid 1px white; */
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+#banner-3 .content-links .image-link a {
+    border-radius: inherit;
+}
+
+#banner-3 .content-links .imagelink a img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    size: cover;
+    opacity: 0.5;
+}
+
+#banner-3 .content-links .image-link span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translateX(-50%);
+}
+
+/* section-4 */
+
+#banner-4 {
+    flex-direction: column;
+}
+
+#banner-4 .content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.trainer {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.trainer img {
+    border-top-left-radius: 80px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 8px;
+    margin-bottom: 10px;
+    max-width: 270px;
+    max-height: 270px;
+    overflow: hidden;
+    outline: 2px solid #fff;
+    padding: 14px;
+}
+
+.trainer i {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+
+/* section-5 */
+
+#banner-5 {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+#banner-5 .image {
+    width: 460px;
+    height: 350px;
+    border-radius: 16px;
+}
+
+#banner-5 .image img {
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+#banner-5 .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 560px;
+}
+
+
+/* responsive */
+
+@media(max-width:910px) {
+    #banner-1 .content {
+        width: 100%;
+    }
+
+    #banner-1 .image {
+        width: 100%;
+    }
+
+    #banner-4 .content {
+        justify-content: center !important;
+    }
+
+    #banner-5 .content {
+        width: 100%;
+    }
+
+    .animate-2 {
+        transform: translateX(0px) !important;
+    }
+
+    .animate-3 {
+        transform: translateX(0px) !important;
+    }
+}
+
+@media(max-width:760px) {
+    #banner-1 .content h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    #banner-3 .content-image h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 2rem;
+        color: var(--white);
+    }
+
+    #banner-3 .content-links .image-link {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 2rem;
+    }
+}
+
+@media(max-width:560px) {
+    #banner-3 .image span {
+        position: relative;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        transform: translateX(0%) translateY(0%);
+    }
+
+    #banner-5 .image {
+        width: 360px;
+        height: 250px;
+    }
+}
+
+@media(max-width:360px) {
+    #banner-1 .image img {
+        width: 280px;
+    }
+
+    #banner-1 .content h1 {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+
+    #banner-2 .image {
+        width: 280px;
+        height: 150px;
+        border-radius: 20px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    #banner-3 .content-links .image-link {
+        width: 100%;
+        height: 280px;
+    }
+
+    #banner-3 .content-links .image-link img {
+        width: 100%;
+        height: 280px;
+    }
+
+    #banner-5 .image {
+        width: 280px;
+        height: 170px;
+    }
+}
+
+/* animation */
+
+.animate {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1.5s all ease-in-out;
+}
+
+.animate.show-animation {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.animate-2 {
+    position: relative;
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: 1.6s all ease-in-out;
+}
+
+.animate-2.left-side-in {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.animate-3 {
+    position: relative;
+    transform: translateX(200px);
+    opacity: 0;
+    transition: 1.6s all ease-in-out;
+}
+
+.animate-3.right-side-in {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+#banner-1 .content h4 {
+    position: relative;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--main-color);
+    text-transform: uppercase;
+    width: fit-content
+}
+
+#banner-1 .content h4::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    font-weight: inherit;
+    border-right: 2px solid var(--main-color);
+    -webkit-text-fill-color: var(--main-color);
+    -webkit-text-stroke: transparent;
+    outline: none;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
