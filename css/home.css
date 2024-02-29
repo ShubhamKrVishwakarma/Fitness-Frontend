@@ -12,6 +12,14 @@
     color: white;
 }
 
+.header {
+    border-bottom: 2px solid hsl(0, 0%, 100%);
+}
+
+.dropdown-toggle::after {
+    color: #fff;
+}
+
 .banner {
     max-width: 1200px;
     display: flex;
@@ -371,7 +379,7 @@
 
 .animate-2 {
     position: relative;
-    transform: translateX(-200px);
+    transform: translateX(-100px);
     opacity: 0;
     transition: 1.6s all ease-in-out;
 }
@@ -383,7 +391,7 @@
 
 .animate-3 {
     position: relative;
-    transform: translateX(200px);
+    transform: translateX(100px);
     opacity: 0;
     transition: 1.6s all ease-in-out;
 }
