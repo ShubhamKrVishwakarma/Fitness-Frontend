@@ -234,7 +234,7 @@ header ul li{
 .input-wrap .icon {
     position: absolute;
     right: calc(1.35rem + 2px);
-    top: 50%;
+    top: 36%;
     transform: translate(-50%);
     pointer-events: none;
     color: var(--input-text);

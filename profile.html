@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,176 @@
     <link rel="stylesheet" href="./css/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/profile.css">
-
 </head>
+
 <body>
+    <!-- Header -->
+    <header class="header bg-dark py-2">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg w-100 navbar-clone fixed">
+            <div class="container px-3">
+                <a class="navbar-brand" href="./home.html">
+                    <h3 class="text-light m-0">eFitLab</h3>
+                </a>
+                <button class="navbar-toggler offcanvas-nav-btn text-light" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" type="button">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="offcanvas offcanvas-start offcanvas-nav bg-dark" id="offcanvasNavbar" style="width: 100%">
+                    <div class="offcanvas-header">
+                        <a class="navbar-brand" href="./home.html">
+                            <h3 class="text-light m-0">eFitLab</h3>
+                        </a>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body pt-0 align-items-center">
+                        <ul class="navbar-nav mx-auto align-items-lg-center gap-2">
+                            <!-- After Login -->
+                            <!-- <li class="nav-item d-block d-lg-none">
+                    <a href="./profile.html" class="d-flex text-light align-items-center link-body-emphasis text-decoration-none">
+                      <img src="https://github.com/mdo.png" alt="User" width="40" height="40" class="rounded-circle">
+                      <h3 class="m-0 ms-2">Username</h3>
+                    </a>
+                  </li>
+                  <li class="nav-item d-block d-lg-none">
+                    <a class="nav-linktext-light" href="./message.html">Messages</a>
+                  </li>
+                  <li class="nav-item d-block d-lg-none">
+                    <a class="nav-linktext-light" href="./cart.html">My Cart</a>
+                  </li>
+                  <li class="nav-item d-block d-lg-none">
+                    <a class="nav-linktext-light" href="./orders.html">My Orders</a>
+                  </li>
+                  <li class="nav-item d-block d-lg-none">
+                    <a class="nav-linktext-light" href="#">Log out</a>
+                  </li>
+                  <li class="nav-item d-block d-lg-none">
+                    <h3>Nav Links</h3>
+                  </li> -->
+                            <!-- Guest -->
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="./home.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="./shop.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="./community.html">Community</a>
+                            </li>
+                            <!-- Workout Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown">Workout</a>
+                                <div class="dropdown-menu dropdown-menu-md m-0 p-0">
+                                    <!-- Begineer -->
+                                    <a class="dropdown-item text-body py-3" href="">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-file-text fs-4 text-primary"></i>
+                                            <div class="ms-3 lh-1">
+                                                <h6 class="mb-1">Beginner</h6>
+                                                <p class="mb-0 fs-6">No workout Experience</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <hr class="m-0">
+                                    <!-- Intermediate -->
+                                    <a class="dropdown-item text-body py-3" href="">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-clipboard fs-4 text-primary"></i>
+                                            <div class="ms-3 lh-1">
+                                                <h6 class="mb-1">
+                                                    Intermediate
+                                                    <span class="text-primary ms-1" id="changelog"></span>
+                                                </h6>
+                                                <p class="mb-0 fs-6">Some workout Experience</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <hr class="m-0">
+                                    <!-- Advanced -->
+                                    <a class="dropdown-item text-body py-3" href="">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-clipboard fs-4 text-primary"></i>
+                                            <div class="ms-3 lh-1">
+                                                <h6 class="mb-1">
+                                                    Advanced
+                                                    <span class="text-primary ms-1" id="changelog"></span>
+                                                </h6>
+                                                <p class="mb-0 fs-6">Works out Daily</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="./about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="./contact.html">Contact</a>
+                            </li>
+                        </ul>
+
+                        <!-- Action Buttons -->
+                        <div class="d-flex flex-column flex-lg-row gap-2 mt-2 mt-lg-0">
+                            <a href="./login.html" class="btn btn-outline-light">Login</a>
+                            <button class="btn btn-info" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">Register</button>
+                        </div>
+
+                        <!-- User Profile -->
+                        <!-- <div class="dropdown text-end d-none d-lg-block">
+                  <a href="./profile.html" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="User" width="40" height="40" class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu text-small me-4">
+                    <li><a class="dropdown-item" href="./profile.html">Profile</a></li>
+                    <li><a class="dropdown-item" href="./message.html">Messages</a></li>
+                    <li><a class="dropdown-item" href="./cart.html">My Cart</a></li>
+                    <li><a class="dropdown-item" href="./orders.html">My Orders</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Log out</a></li>
+                  </ul>
+                </div> -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Modal -->
+        <div class="modal fade" id="registerModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Create New Account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row mb-3">
+                            <a href="#" class="modal-member">
+                                <img src="https://images.startups.co.uk/wp-content/uploads/2017/06/Job-offer-new-employee-1.jpg?width=709&height=460&fit=crop"
+                                    alt="">
+                                <div class="modal-member-title">
+                                    <h4>Join as Member</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="#" class="modal-trainer">
+                                <img src="https://as1.ftcdn.net/v2/jpg/02/64/23/78/1000_F_264237813_6Yn9JJkBZkuGP9gEgebCA5xVqhqz76v3.jpg"
+                                    alt="">
+                                <div class="modal-trainer-title">
+                                    <h4>Join as Trainer</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center align-items-center">
+                        <a href="">Login as Admin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <div class="container-fluid" id="upper-container">
         <div class="profile">
             <div class="inner-profile">
@@ -42,15 +210,14 @@
         </div>
     </div>
 
-    
-    <div class="container-fluid" id="lower-container">
+    <div class="container-fluid mb-4" id="lower-container">
         <div class="profile-nav">
             <div class="buttons-for-user">
                 <button type="button" class="btn btn-primary" id="chat-button">Chat</button>
                 <button type="button" class="btn btn-primary">Follow</button>
             </div>
             <div class="buttons-for-self">
-                <button type="button" id="edit" class="btn btn-primary" >Edit</button>
+                <button type="button" id="edit" class="btn btn-primary">Edit</button>
             </div>
             <div class="profile-nav-items">
                 <a href="#" class="nav-item-links is-active" id="about" active-color="black">About</a>
@@ -62,7 +229,11 @@
             <div class="about" id="about-section">
                 <div class="about-content">
                     <ul>
-                        <li><b>Bio</b><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore provident voluptatibus numquam eveniet atque vitae explicabo quam ipsam tempore debitis voluptatem deserunt harum quasi velit voluptas, cupiditate omnis beatae minus.</p></li>
+                        <li><b>Bio</b>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore provident voluptatibus
+                                numquam eveniet atque vitae explicabo quam ipsam tempore debitis voluptatem deserunt
+                                harum quasi velit voluptas, cupiditate omnis beatae minus.</p>
+                        </li>
                         <li><i class="bi bi-person-circle"></i> Male</li>
                         <li><i class="bi bi-geo-alt-fill"></i> Lives in <b>Kolkata</b></li>
                         <li><i class="bi bi-clock-fill"></i> Joined on <b>February 2024</b></li>
@@ -73,89 +244,105 @@
             </div>
             <div class="post" id="post-section">
                 <section class="grid">
-                    <a href="" class="grid-photo" style="background-image: url('https://images.unsplash.com/photo-1548032885-b5e38734688a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
-                    <a href="" class="grid-photo" style="background-image: url('https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
-                    <a href="" class="grid-photo" style="background-image: url('https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
-                    <a href="" class="grid-photo" style="background-image: url('https://images.unsplash.com/photo-1501426026826-31c667bdf23d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
-                    <a href="" class="grid-photo" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></a>
-                    <a href="" class="grid-photo" style="background-image: url('https://images.unsplash.com/photo-1507041957456-9c397ce39c97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
-                    <a href="" class="grid-photo" style="background-image: url('https://images.unsplash.com/photo-1519821172144-4f87d85de2a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
-                    <a href="" class="grid-photo" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
-                    <a href="" class="grid-photo" style="background-image: url('https://images.unsplash.com/photo-1509233725247-49e657c54213?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
-                    <a href="" class="grid-photo" style="background-image: url('https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></a>
-                    <a href="" class="grid-photo" style="background-image: url('https://images.unsplash.com/photo-1520454974749-611b7248ffdb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
-                    <a href="" class="grid-photo" style="background-image: url('https://images.unsplash.com/photo-1414609245224-afa02bfb3fda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
-                    <a href="" class="grid-photo" style="background-image: url('https://images.unsplash.com/photo-1504681869696-d977211a5f4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
-                  </section>
+                    <a href="" class="grid-photo"
+                        style="background-image: url('https://images.unsplash.com/photo-1548032885-b5e38734688a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
+                    <a href="" class="grid-photo"
+                        style="background-image: url('https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
+                    <a href="" class="grid-photo"
+                        style="background-image: url('https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
+                    <a href="" class="grid-photo"
+                        style="background-image: url('https://images.unsplash.com/photo-1501426026826-31c667bdf23d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
+                    <a href="" class="grid-photo"
+                        style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></a>
+                    <a href="" class="grid-photo"
+                        style="background-image: url('https://images.unsplash.com/photo-1507041957456-9c397ce39c97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
+                    <a href="" class="grid-photo"
+                        style="background-image: url('https://images.unsplash.com/photo-1519821172144-4f87d85de2a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
+                    <a href="" class="grid-photo"
+                        style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
+                    <a href="" class="grid-photo"
+                        style="background-image: url('https://images.unsplash.com/photo-1509233725247-49e657c54213?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
+                    <a href="" class="grid-photo"
+                        style="background-image: url('https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></a>
+                    <a href="" class="grid-photo"
+                        style="background-image: url('https://images.unsplash.com/photo-1520454974749-611b7248ffdb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
+                    <a href="" class="grid-photo"
+                        style="background-image: url('https://images.unsplash.com/photo-1414609245224-afa02bfb3fda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
+                    <a href="" class="grid-photo"
+                        style="background-image: url('https://images.unsplash.com/photo-1504681869696-d977211a5f4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');"></a>
+                </section>
             </div>
             <div class="edit" id="edit-section">
                 <div class="card border-0 bg-transparent mb-0">
                     <div class="card-body p-lg-5">
-                       <div class="mb-5">
-                          <h4 class="mb-1">Account Information</h4>
-                          <p class="mb-0 fs-6">Edit your personal information and address.</p>
-                       </div>
-                       <form class="row g-3 needs-validation" novalidate>
-                          <div class="col-lg-7 col-md-7">
-                             <label for="profileImageInput" class="form-label">Update Profile Image</label>
-                             <input type="file" class="form-control" id="profileImageInput" value="" />
-                             <div class="invalid-feedback">Please provide an image.</div>
-                          </div>
-                          <div class="col-lg-12 col-md-12">
-                             <label for="profileBioInput" class="form-label">Update Bio</label>
-                             <textarea type="textarea" class="form-control" id="profileBioInput" value="" required >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, debitis.</textarea>
-                             <div class="invalid-feedback">Please enter bio.</div>
-                          </div>
-                          <div class="col-lg-7 col-md-12">
-                             <label for="profileNameInput" class="form-label">Name</label>
-                             <input type="text" class="form-control" id="profileNameInput" value="" required />
-                             <div class="invalid-feedback">Please enter firstname.</div>
-                          </div>
-                          <div class="col-lg-4">
-                            <label for="profileGenderInput" class="form-label">Gender</label>
-                            <select class="form-select" id="profileGenderInput" required>
-                               <option selected disabled value="">Choose...</option>
-                               <option value="Male" selected="">Male</option>
-                               <option value="Female">Female</option>
-                               <option value="Other">Other</option>
-                            </select>
-                            <div class="invalid-feedback">Please select a valid gender.</div>
-                         </div>
-                          <div class="col-lg-6">
-                             <label for="profilePhoneInput" class="form-label">Phone</label>
-                             <input type="text" class="form-control input-phone" id="profilePhoneInput" placeholder="+91 XXXXX XXXXX" required />
-                             <div class="invalid-feedback">Please enter phone.</div>
-                          </div>
-                          <div class="col-lg-6">
-                             <label for="profileBirthdayInput" class="form-label">Birthday</label>
-                             <input type="date" class="form-control input-date" id="profileBirthdayInput" placeholder="dd/mm/yyyy" required />
-                             <div class="invalid-feedback">Please enter birthday.</div>
-                          </div>
-                          <div class="col-lg-12">
-                             <label for="profileAddress1Input" class="form-label">Address</label>
-                             <input type="text" class="form-control" id="profileAddress1Input" required />
-                             <div class="invalid-feedback">Please enter address.</div>
-                          </div>
-                          <div class="col-lg-4">
-                            <label for="profileStateInput" class="form-label">State</label>
-                            <input type="text" class="form-control" id="profileStateInput" required />
-                            <div class="invalid-feedback">Please provide a State.</div>
-                          </div>
-                          <div class="col-lg-4">
-                            <label for="profileCityInput" class="form-label">City</label>
-                            <input type="text" class="form-control" id="profileCityInput" required />
-                            <div class="invalid-feedback">Please provide a City.</div>
-                          </div>
-                          <div class="col-lg-4">
-                             <label for="profileZipInput" class="form-label">Zip/Code</label>
-                             <input type="text" class="form-control" id="profileZipInput" required />
-                             <div class="invalid-feedback">Please provide a Zip.</div>
-                          </div>
-                          <div class="col-12 mt-4">
-                              <button class="btn btn-primary me-2" type="submit">Update Profile</button>
-                              <button class="btn btn-light" type="reset">Reset</button>
+                        <div class="mb-5">
+                            <h4 class="mb-1">Account Information</h4>
+                            <p class="mb-0 fs-6">Edit your personal information and address.</p>
+                        </div>
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-lg-7 col-md-7">
+                                <label for="profileImageInput" class="form-label">Update Profile Image</label>
+                                <input type="file" class="form-control" id="profileImageInput" value="" />
+                                <div class="invalid-feedback">Please provide an image.</div>
                             </div>
-                            
+                            <div class="col-lg-12 col-md-12">
+                                <label for="profileBioInput" class="form-label">Update Bio</label>
+                                <textarea type="textarea" class="form-control" id="profileBioInput" value=""
+                                    required>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, debitis.</textarea>
+                                <div class="invalid-feedback">Please enter bio.</div>
+                            </div>
+                            <div class="col-lg-7 col-md-12">
+                                <label for="profileNameInput" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="profileNameInput" value="" required />
+                                <div class="invalid-feedback">Please enter firstname.</div>
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="profileGenderInput" class="form-label">Gender</label>
+                                <select class="form-select" id="profileGenderInput" required>
+                                    <option selected disabled value="">Choose...</option>
+                                    <option value="Male" selected="">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a valid gender.</div>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="profilePhoneInput" class="form-label">Phone</label>
+                                <input type="text" class="form-control input-phone" id="profilePhoneInput"
+                                    placeholder="+91 XXXXX XXXXX" required />
+                                <div class="invalid-feedback">Please enter phone.</div>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="profileBirthdayInput" class="form-label">Birthday</label>
+                                <input type="date" class="form-control input-date" id="profileBirthdayInput"
+                                    placeholder="dd/mm/yyyy" required />
+                                <div class="invalid-feedback">Please enter birthday.</div>
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="profileAddress1Input" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="profileAddress1Input" required />
+                                <div class="invalid-feedback">Please enter address.</div>
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="profileStateInput" class="form-label">State</label>
+                                <input type="text" class="form-control" id="profileStateInput" required />
+                                <div class="invalid-feedback">Please provide a State.</div>
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="profileCityInput" class="form-label">City</label>
+                                <input type="text" class="form-control" id="profileCityInput" required />
+                                <div class="invalid-feedback">Please provide a City.</div>
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="profileZipInput" class="form-label">Zip/Code</label>
+                                <input type="text" class="form-control" id="profileZipInput" required />
+                                <div class="invalid-feedback">Please provide a Zip.</div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button class="btn btn-primary me-2" type="submit">Update Profile</button>
+                                <button class="btn btn-light" type="reset">Reset</button>
+                            </div>
+
                         </form>
                     </div>
                 </div>
@@ -166,33 +353,197 @@
                         </div>
                         <form class="row g-3 needs-validation" novalidate>
                             <div class="col-lg-4 position-relative px-40">
-                              <label for="profileOldPassInput" class="form-label">Old Password</label>
-                              <input type="password" class="form-control password" id="profileOldPassInput" maxlength="16" required />
-                              <i class="bi bi-eye-slash text-dark togglePassword" id="oldPassToggle"></i>
-                              <div class="invalid-feedback">Enter your old password.</div> 
+                                <label for="profileOldPassInput" class="form-label">Old Password</label>
+                                <input type="password" class="form-control password" id="profileOldPassInput"
+                                    maxlength="16" required />
+                                <i class="bi bi-eye-slash text-dark togglePassword" id="oldPassToggle"></i>
+                                <div class="invalid-feedback">Enter your old password.</div>
                             </div>
                             <div class="col-lg-4 position-relative px-40">
                                 <label for="profileNewPassInput" class="form-label">New Password</label>
-                                <input type="password" class="form-control password" id="profileNewPassInput" maxlength="16" required />
+                                <input type="password" class="form-control password" id="profileNewPassInput"
+                                    maxlength="16" required />
                                 <i class="bi bi-eye-slash text-dark togglePassword" id="newPassToggle"></i>
                                 <div class="invalid-feedback">Enter your new password.</div>
                             </div>
                             <div class="col-lg-4 position-relative px-40">
                                 <label for="profileRePassInput" class="form-label">Re-Enter New Password</label>
-                                <input type="password" class="form-control password" id="profileRePassInput" maxlength="16" required />
+                                <input type="password" class="form-control password" id="profileRePassInput"
+                                    maxlength="16" required />
                                 <i class="bi bi-eye-slash text-dark togglePassword" id="rePassToggle"></i>
-                               <div class="invalid-feedback">Re-Enter password.</div>
+                                <div class="invalid-feedback">Re-Enter password.</div>
                             </div>
-                           <div class="col-12 mt-4">
-                              <button class="btn btn-primary me-2" type="submit">Update Password</button>
-                           </div>
-                       </form>
+                            <div class="col-12 mt-4">
+                                <button class="btn btn-primary me-2" type="submit">Update Password</button>
+                            </div>
+                        </form>
                     </div>
-                 </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <footer class="footer bg-dark py-4">
+        <div class="container">
+            <!-- Footer 4 column -->
+            <div class="row">
+                <div class="col-xxl-5 col-lg-5 col-md-7">
+                    <div class="mb-7 mb-xl-0">
+                        <div class="mb-4">
+                            <a href="./home.html" class="footer-heading">
+                                <h3 >eFitLab</h3>
+                            </a>
+                        </div>
+                        <p class="mb-5">Browse a diverse range of workouts tailored to your fitness goals and preferences. Whether you're a beginner or an experienced fitness enthusiast, we've got the perfect routines for you.</p>
+    
+                    </div>
+                </div>
+                <div class="offset-xxl-1 col-xxl-6 col-lg-6 offset-md-1 col-md-4 footer-body">
+                    <div class="row" id="ft-links">
+                        <div class="col-lg-4 col-12">
+                            <div class="position-relative">
+                                <div class="mb-3 pb-2 d-flex justify-content-between border-bottom border-bottom-lg-0">
+                                    <h5 class="text-light">Links</h5>
+                                    <a
+                                        class="d-block d-lg-none stretched-link text-inherit"
+                                        data-bs-toggle="collapse"
+                                        href="#collapseLanding"
+                                        role="button"
+                                        aria-expanded="false"
+                                        aria-controls="collapseLanding">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </a>
+                                </div>
+                                <div class="collapse d-lg-block" id="collapseLanding" data-bs-parent="#ft-links">
+                                    <ul class="list-unstyled mb-0 py-3 py-lg-0">
+                                        <li class="mb-2">
+                                            <a href="./home.html" class="text-decoration-none">Home</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="./shop.html" class="text-decoration-none">Shop</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="./community.html" class="text-decoration-none">Community</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="./about.html" class="text-decoration-none">About</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="./contact.html" class="text-decoration-none">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="mb-3 pb-2 d-flex justify-content-between border-bottom border-bottom-lg-0 position-relative">
+                                <h5 class="text-light">Accounts</h5>
+                                <a
+                                    class="d-block d-lg-none stretched-link text-inherit"
+                                    data-bs-toggle="collapse"
+                                    href="#collapseAccounts"
+                                    role="button"
+                                    aria-expanded="false"
+                                    aria-controls="collapseAccounts">
+                                    <i class="bi bi-chevron-down"></i>
+                                </a>
+                            </div>
+                            <div class="collapse d-lg-block" id="collapseAccounts" data-bs-parent="#ft-links">
+                                <ul class="list-unstyled mb-0 py-3 py-lg-0">
+                                    <li class="mb-2">
+                                        <a href="./signup.html" class="text-decoration-none">Register</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="./login.html" class="text-decoration-none">Login</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="#" class="text-decoration-none">Forgot Password</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="#" class="text-decoration-none">Reset Password</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="./profile.html" class="text-decoration-none">Profile</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="mb-3 pb-2 d-flex justify-content-between border-bottom border-bottom-lg-0 position-relative">
+                                <h5 class="text-light">Products</h5>
+                                <a
+                                    class="d-block d-lg-none stretched-link text-inherit"
+                                    data-bs-toggle="collapse"
+                                    href="#collapseResources"
+                                    role="button"
+                                    aria-expanded="false"
+                                    aria-controls="collapseResources">
+                                    <i class="bi bi-chevron-down"></i>
+                                </a>
+                            </div>
+                            <div class="collapse d-lg-block" id="collapseResources" data-bs-parent="#ft-links">
+                                <ul class="list-unstyled mb-0 py-3 py-lg-0">
+                                    <li class="mb-2">
+                                        <a href="#" class="text-decoration-none">Cap</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="#!" class="text-decoration-none">T-Shirt</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="../changelog.html" class="text-decoration-none">Dumbells</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="#!" class="text-decoration-none">Protien</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="#!" class="text-decoration-none">Creatine</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-7 mb-3">
+            <div class="row align-items-center">
+                <div class="col-md-9">
+                    <div class="small mb-3 mb-md-0">
+                        Copyright © 2023
+        
+                        <span class="violet">eFitLab - Fitness Platform</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-md-end d-flex align-items-center justify-content-md-end">
+                        <div class="ms-3 d-flex gap-2">
+                            <a href="#!" class="text-reset btn btn-instagram btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                </svg>
+                            </a>
+                            <a href="#!" class="text-reset btn btn-facebook btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                </svg>
+                            </a>
+                            <a href="#!" class="text-reset btn btn-twitter btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/bootstrap.js"></script>
     <script src="js/profile.js"></script>
 </body>
+
 </html>
