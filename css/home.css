@@ -6,9 +6,7 @@
     --primary-color: black;
 }
 
-#hmbody {
-    background-color: var(--primary-color);
-    /* background: -webkit-radial-gradient(50% 50%, ellipse cover, var(--main-color) -500%, black); */
+body {
     color: white;
 }
 
