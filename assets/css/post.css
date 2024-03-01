@@ -1,0 +1,125 @@
+/* Posts */
+
+.posts .post {
+    padding: 1rem;
+}
+
+.post .post-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post .post-head .user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.post .post-head .user-info .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.post .post-body {
+    height: 550px;
+    /* max-height: 550px; */
+}
+
+.post .post-body img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Video */
+.post .post-body video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.post .post-body {
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 0.7rem 0;
+}
+
+.post .post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+
+
+/* Comment Section */
+
+.comment-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-head .user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.comment-head .user-info .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.comment-body {
+    border-top: 1px solid gray;
+}
+
+.comment-body .comment-body-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-body .comment-user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.comment-body .comment-user-info .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+#comment-card {
+    /* max-height: 749px; */
+    max-height: 724px;
+    overflow-y: auto;
+}
+
+/* Queries */
+
+.table td, .table th {
+    white-space: normal;
+}
+
+.query-table table {
+    overflow-x: auto;
+}
+
+.query-table table tbody td {
+    padding: 0.7rem 1.5rem;
+}
