@@ -15,6 +15,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+  <style>
+    .navbar-collapse {
+        height: auto!important;
+    }
+  </style>
 </head>
 
 <body class="g-sidenav-show bg-gray-100"> 
@@ -335,9 +340,11 @@
             </div>
             <!-- Manage Category -->
             <div class="col-lg-6 mb-4">
+                <!-- Update / Delete Category -->
                 <div class="card" style="display: none;" id="manageCategory">
-                    <div class="card-header pb-0 p-3">
-                    <h6 class="mb-0">Manage Category</h6>
+                    <div class="card-header d-flex flex-wrap justify-content-between align-items-center pb-0 p-3">
+                      <h6 class="mb-0">Manage Category</h6>
+                      <button class="btn btn-sm btn-danger my-2">Delete</button>
                     </div>
                     <hr class="bg-dark">
                     <div class="card-body py-1 px-3">
@@ -358,6 +365,7 @@
                     </div>
                     </div>
                 </div>
+                <!-- Add Category -->
                 <div class="card" id="addCategory">
                     <div class="card-header pb-0 p-3">
                     <h6 class="mb-0">Add Category</h6>
