@@ -2,8 +2,9 @@
 
 
 :root {
-    --main-color: #29a396;
-    --primary-color: black;
+    /* --main-color: #29a396; */
+    --main-color: rgba(255, 0, 0, 0.648);
+    --primary-color: white;
 }
 
 body {
@@ -12,6 +13,16 @@ body {
 
 .header {
     border-bottom: 2px solid hsl(0, 0%, 100%);
+    background-color: black;
+}
+
+.footer{
+    background-color: black;
+}
+
+#logo{
+    width:150px;
+    height:45px;
 }
 
 .hr {
@@ -28,11 +39,18 @@ body {
     margin-bottom: 5rem;
 }
 
+button{
+    background-color: #fff !important;
+    border: 2px solid var(--main-color) !important;
+    outline: var(--main-color) !important;
+    color:var(--main-color) !important;
+}
+
 .banner-button button {
     background-color: var(--main-color);
     color: black;
     width: fit-content !important;
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 .heading {
@@ -46,14 +64,27 @@ body {
 
 /* section-1 */
 
+video{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    overflow-x:hidden ;
+    width:100% ;
+    height:100%;
+    object-fit: cover;
+}
+
 #banner-1 {
-    margin-top: 8rem;
-    flex-wrap: wrap-reverse;
-    justify-content: space-between;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
 }
 
 #banner-1 .content {
-    width: 60%;
+    width: 80%;
     min-width: 40%;
 }
 
@@ -91,7 +122,7 @@ body {
 
 #banner-2 {
     flex-direction: column;
-    gap: 70px;
+    gap: 30px;
 }
 
 #banner-2 .content {
@@ -102,10 +133,11 @@ body {
 
 #banner-2 .image {
     width: 350px;
-    height: 170px;
+    height: 220px;
     border-radius: 20px;
     position: relative;
-    padding-bottom: 10px;
+    margin-bottom: 1rem;
+    background-color: #111317;
 }
 
 #banner-2 .image img {
@@ -142,6 +174,9 @@ body {
 
 #banner-3 {
     flex-direction: column;
+    background-color: #111317;
+    max-width :100%;
+    padding: 2rem 0;
 }
 
 #banner-3 .image {
@@ -217,19 +252,24 @@ body {
 .trainer {
     margin-bottom: 1rem;
     text-align: center;
+    color: #111317;
 }
 
 .trainer img {
-    border-top-left-radius: 80px;
+    /* border-top-left-radius: 80px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 80px;
-    border-bottom-left-radius: 8px;
+    border-bottom-left-radius: 8px; */
+    border-radius: 10px;
     margin-bottom: 10px;
     max-width: 270px;
     max-height: 270px;
     overflow: hidden;
-    outline: 2px solid #fff;
-    padding: 14px;
+    /* outline: 2px solid #fff; */
+    outline: 1px solid black;
+    padding: 2px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .trainer i {
@@ -245,6 +285,10 @@ body {
     justify-content: center;
     gap: 1.5rem;
     flex-wrap: wrap;
+    max-width: 100%;
+    background-color: #111317;
+    margin-bottom: 0;
+    padding:5rem 0;
 }
 
 #banner-5 .image {
@@ -267,12 +311,97 @@ body {
     width: 560px;
 }
 
+/* banner-6 */
+
+#banner-6{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    height: 700px;
+    max-width: 100%;
+    margin-top: 8rem;
+}
+
+#banner-6 .image{
+    position: absolute;
+    top:0;
+    left:0;
+    width:inherit;
+    height:inherit;
+    background-color: #111317;
+    z-index: -1;
+}
+#banner-6 .image img{
+    width:inherit;
+    height: inherit;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.5;
+}
+
+#banner-6 .content{
+    color:white;
+    text-align: center;
+}
+
+/* banner7 */
+#banner-7{
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+#banner-7 .heading{
+    align-items: center;
+}
+
+#banner-7 .slider{
+    width:inherit;
+}
+
+#banner-7 .slider[data-animated="true"]{
+    overflow: hidden;
+}
+
+#banner-7 .slider[data-animated="true"] .slide-track{
+    flex-wrap: nowrap;
+    animation: scroll 20s linear infinite;
+}
+
+
+#banner-7 .slider .slide{
+    display:flex;
+    height:200px;
+    width:500px;
+    padding:5rem;
+}
+
+.slide figure img{
+    width:150px;
+}
+
+
+#banner-7 .slider .slide-track{
+    display:flex;
+    flex-wrap: wrap;
+    padding-block:1rem;
+    gap:2rem;
+}    
+
+@keyframes scroll{
+    to{
+        transform:translate(-114.4%);
+    }    
+}    
+
 /* responsive */
 
 @media(max-width:910px) {
-    #banner-1{
+    /* #banner-1{
         margin-top: 4rem !important;
-    }
+    } */
 
     #banner-1 .content {
         width: 100%;
@@ -316,6 +445,13 @@ body {
         width: 100%;
         height: 400px;
         margin-bottom: 2rem;
+    }
+    #banner-7 .slider[data-animated="true"] .slide-track{
+        animation: scroll 17s linear infinite;
+    }
+    #banner-7 .slider .slide{
+        padding-left:1rem;
+        padding-right:1rem;
     }
 }
 
@@ -365,6 +501,9 @@ body {
     #banner-5 .image {
         width: 280px;
         height: 170px;
+    }
+    #banner-7 .slider[data-animated="true"] .slide-track{
+        animation: scroll s linear infinite;
     }
 }
 
