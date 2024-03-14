@@ -36,3 +36,16 @@ window.addEventListener("scroll", () => {
         }
     }
 });
+
+const slider = document.querySelectorAll('.slider');
+
+if(!window.matchMedia("(prefers-reduced-motion:reduce)").matches){
+    addAnimation();
+}
+
+function addAnimation(){
+    slider.forEach(slider =>{
+        slider.setAttribute("data-animated",true);
+        const sliderTrack = slider.querySelector('.slide-track');
+    });
+}

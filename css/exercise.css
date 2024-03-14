@@ -1,0 +1,153 @@
+@import url(./global.css);
+
+.icons{
+    width:40px;
+}
+.icons img{
+    width:inherit;
+}
+
+
+/* banner-section */
+#banner-section{
+    position:relative;
+    height: 280px;
+    background-color: black;
+    margin-bottom: 5rem;
+}
+#banner-section .image{
+    width: inherit;
+    height: inherit;
+    object-fit:cover;
+    overflow:hidden;
+    object-position:end;
+}
+
+#banner-section .image img{
+    object-fit: cover;
+    width:inherit;
+    height: inherit;
+    opacity: 0.5;
+    /* height: inherit; */
+}
+
+#floating-image{
+    position: absolute;
+    left:50%;
+    bottom: -40%;
+    transform: translateX(-50%);
+    width:360px;
+}
+#floating-image img{
+    width: inherit;
+}
+
+/* details-section */
+
+#detail-section{
+    /* display: flex; */
+    justify-content: center;
+    /* gap:20px; */
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+}
+
+.inner-box{
+    display: flex;
+    gap:20px;
+}
+
+#center-data{
+    border-right: 1px solid;
+    border-left: 1px solid;
+}
+
+/* video and workout section */
+
+
+.training-preview{
+    display: flex;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    justify-content: center;
+    height:500px;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: center;
+}
+
+.training-preview video{
+    position: relative;
+    border-radius: inherit;
+    object-fit: cover;
+    width: inherit;
+    height: inherit;
+}
+
+.play-pause-btn{
+    position:absolute;
+    bottom:20px;
+    right:20px;
+}
+
+.training-image{
+    border-radius: 10px;
+}
+.training-image img{
+    width: 280px;
+    border-radius: inherit;
+}
+
+.list-items{
+    display:flex;
+    border-radius: inherit;
+}
+
+.training-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    outline: none;
+    border: none;
+}
+
+@media(max-width:530px){
+    .training-image img{
+        width: 200px;
+        border-radius: inherit;
+    }
+    .icons{
+        width:25px;
+    }
+    #trainings{
+        max-width: 100vw !important;
+    }
+    .training-preview{
+        height:300px;
+    }
+
+}
+@media(max-width:380px){
+    .training-image img{
+        width: 100px;
+        border-radius: inherit;
+    }
+    #floating-image{
+        width:280px;
+    }
+    .training-preview{
+        height:250px;
+    }
+    .inner-box{
+        display: flex;
+        gap:10px;
+    }
+    #center-data{
+        border-right: none;
+        margin-bottom: 1rem;
+    }
+}

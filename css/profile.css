@@ -1,13 +1,15 @@
 @import url(./global.css);
 
-body {
+#profile-body {
     background-color: #dcdcdc;
+    height:auto;
+    padding-bottom:20px;
 }
 
 /* UPPER SECTION*/
 
 #upper-container {
-    max-width: 1140px;
+    max-width: 1200px;
     padding-top: 20px;
 }
 
@@ -90,7 +92,7 @@ body {
 /*LOWER SECTION*/
 
 #lower-container {
-    max-width: 1140px;
+    max-width: 1200px;
     padding-top: 10px;
 }
 
