@@ -10,6 +10,115 @@
   <title>Fitness Hub</title>
 </head>
 
+<body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="header bg-dark py-2">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg w-100 navbar-clone fixed">
+        <div class="container px-3">
+          <a class="navbar-brand" href="./home.html">
+            <h3 class="text-light m-0">eFitLab</h3>
+          </a>
+          <button class="navbar-toggler offcanvas-nav-btn text-light" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            type="button">
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="offcanvas offcanvas-start offcanvas-nav bg-dark" id="offcanvasNavbar" style="width: 100%">
+            <div class="offcanvas-header">
+              <a class="navbar-brand" href="./home.html">
+                <h3 class="text-light m-0">eFitLab</h3>
+              </a>
+              <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body pt-0 align-items-center">
+              <ul class="navbar-nav mx-auto align-items-lg-center gap-2">
+                <!-- After Login -->
+                <li class="nav-item d-block d-lg-none">
+                  <a href="./profile.html" class="d-flex text-light align-items-center link-body-emphasis text-decoration-none">
+                    <img src="https://github.com/mdo.png" alt="User" width="40" height="40" class="rounded-circle">
+                    <h3 class="m-0 ms-2">Username</h3>
+                  </a>
+                </li>
+                <li class="nav-item d-block d-lg-none">
+                  <a class="nav-link text-light" href="./message.html">Messages</a>
+                </li>
+                <li class="nav-item d-block d-lg-none">
+                  <a class="nav-link text-light" href="./cart.html">My Cart</a>
+                </li>
+                <li class="nav-item d-block d-lg-none">
+                  <a class="nav-link text-light" href="./orders.html">My Orders</a>
+                </li>
+                <li class="nav-item d-block d-lg-none">
+                  <a class="nav-link text-light" href="#">Log out</a>
+                </li>
+                <li>
+                  <hr class="hr m-0">
+                </li>
+                <li class="nav-item d-block d-lg-none text-light">
+                  <h3>Nav Links</h3>
+                </li>
+                <!-- Guest -->
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="./home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="./shop.html">Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="./community.html">Community</a>
+                </li>
+                <!-- Workout Dropdown -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-light" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown">Workout</a>
+                  <div class="dropdown-menu dropdown-menu-md m-0 p-0">
+                    <!-- Begineer -->
+                    <a class="dropdown-item text-body py-3" href="">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-file-text fs-4 text-primary"></i>
+                        <div class="ms-3 lh-1">
+                          <h6 class="mb-1">Beginner</h6>
+                          <p class="mb-0 fs-6">No workout Experience</p>
+                        </div>
+                      </div>
+                    </a>
+                    <hr class="m-0">
+                    <!-- Intermediate -->
+                    <a class="dropdown-item text-body py-3" href="">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-clipboard fs-4 text-primary"></i>
+                        <div class="ms-3 lh-1">
+                          <h6 class="mb-1">
+                            Intermediate
+                            <span class="text-primary ms-1" id="changelog"></span>
+                          </h6>
+                          <p class="mb-0 fs-6">Some workout Experience</p>
+                        </div>
+                      </div>
+                    </a>
+                    <hr class="m-0">
+                    <!-- Advanced -->
+                    <a class="dropdown-item text-body py-3" href="">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-clipboard fs-4 text-primary"></i>
+                        <div class="ms-3 lh-1">
+                          <h6 class="mb-1">
+                            Advanced
+                            <span class="text-primary ms-1" id="changelog"></span>
+                          </h6>
+                          <p class="mb-0 fs-6">Works out Daily</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="./about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="./contact.html">Contact</a>
+                </li>
+              </ul>
 <body class="bg-light">
   <!-- Header -->
   <header class="header py-2">
