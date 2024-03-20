@@ -4,107 +4,57 @@
     font-family: "Poppins", sans-serif;
 }
 
-
 .card-product{
     display: flex;
 }
-.left img{
-    border: 1px solid black;
-     width: 450px;
-     height: 550px;
-     margin-inline:32px;
-     margin-top: 17px;
-}
-.card-product .img img{
-    border: 1px solid black;
-    margin-top: 17px;
-    width: 74px;
-    margin-left: 22px;
-}
-.card-product .right{
-    margin-top: 55px;
-}
-.right{
-   padding-left: 15px;
-   padding-right: 50px;
 
+.left {
+    border: 1px solid black;
+    max-width: 450px;
+    max-height: 550px;
+}
+
+.left img {
+    height: 100%;
+    width: 100%;
+}
+
+.img {
+    /* margin-top: 17px; */
+    max-width: 74px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; */
+}
+
+.img img {
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
 }
 
 .right i{
-    margin-top: 17px;
     color:black;
 }
+
 .right h1{
-    margin-top: 17px;
-    font-size: 2.5rem;
-}
-.right p{
-    margin-top: 25px;
-    text-align: justify;
-    
-}
-.right h3{
-    margin-top: 25px;
-}
-.right button{
-    margin-top: 30px;
-    width: 600px;
-    height: 50px;
-    background-color:rgb(255,106,0);
-    color:white;
-    font-size: 25px;
-    border:none;
-    font-weight: 600px ;
-    margin-left: 100px;
-}
-.right button:hover{
-    background-color: rgb(255, 136, 0);
-    cursor: pointer;
-}
-.left img:hover{
-    box-shadow: 1px 1px 10px 4px 
-}
-.card-product .img img:hover{
-    box-shadow: 1px 1px 10px 4px 
-}
-
-.heading{
-
-    text-align: center;
-    padding: 2rem 0;
-    padding-bottom: 3rem;
     font-size: 2rem;
-    color: var(--black);
-}
-.heading span{
-
-    background-color: green;
-    color:#fff;
-    display: inline-block;
-    padding: .5rem 2rem;
-    clip-path: polygon(100% 0,93% 50%,100% 99%,0% 100%,7% 50%,0% 0%);
 }
 
-/* review */
-.box{
-    padding-left: 100px;
+.right p{
+    text-align: justify;
 }
 
-.box img{
-    width: 150px;
-    height: 150px;  
+.left img:hover {
+    box-shadow: 1px 1px 10px 4px;
 }
 
-.review .review-slider{
-    
-    padding:1rem;
+.card-product .img img:hover{
+    box-shadow: 1px 1px 10px 4px;
 }
 
-.review .review-slider.box{
-    border: 1px solid red;
-   
-}
-
+/* Review */
 
 .total-like-user-main a {
     display: inline-block;
