@@ -1,0 +1,35 @@
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+.workout-selection-box {
+    background-color: #1e1e1e;
+    height: 280px;
+    width: 280px;
+    position: relative;
+}
+
+.workout-selection-box:hover {
+    opacity: 0.6;
+}
+
+.workout-selection-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.age-box {
+    background-color: #363636;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.age-box span {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
