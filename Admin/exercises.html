@@ -188,9 +188,8 @@
                     <div class="col-12">
                         <div class="card mb-4">
                             <div class="card-header pb-0 d-flex justify-content-between align-items-center flex-wrap">
-                                <h6>Workout Plan Table</h6>
-                                <button class="btn btn-sm btn-primary my-1" id="addProductButton">Add New Workout
-                                    Plan</button>
+                                <h6>Products table</h6>
+                                <button class="btn btn-sm btn-primary my-1" id="addProductButton">Add Exercise</button>
                             </div>
                             <div class="card-body px-0 pt-0 pb-2">
                                 <div class="table-responsive p-0">
@@ -202,7 +201,10 @@
                                                     ID</th>
                                                 <th
                                                     class="text-uppercase text-center text-secondary text-xxs font-weight-bolder opacity-7">
-                                                    Name</th>
+                                                    Exercise</th>
+                                                <th
+                                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center">
+                                                    Type</th>
                                                 <th
                                                     class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center">
                                                     Level</th>
@@ -214,11 +216,57 @@
                                                 <td>
                                                     <span class="ms-3 text-xs font-weight-bold">14</span>
                                                 </td>
-                                                <td class="text-center">
-                                                    <span class="text-xs font-weight-bold">DUMBELL BENCH PRESS</span>
+                                                <td class="d-flex justify-content-center align-items-center">
+                                                    <div class="px-2" style="width: 300px;">
+                                                        <img src="../images/team-3.jpg" class="w-100 rounded"
+                                                            alt="Product">
+                                                    </div>
                                                 </td>
                                                 <td class="text-center">
                                                     <span class="badge badge-sm bg-gradient-primary">Begineer</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="text-xs font-weight-bold">Chest</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button class="me-2 btn btn-xs btn-dark mb-0">Manage</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="ms-3 text-xs font-weight-bold">14</span>
+                                                </td>
+                                                <td class="d-flex justify-content-center align-items-center">
+                                                    <div class="px-2" style="width: 300px;">
+                                                        <img src="../images/team-3.jpg" class="w-100 rounded"
+                                                            alt="Product">
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="badge badge-sm bg-warning">Intermediate</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="text-xs font-weight-bold">Leg</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button class="me-2 btn btn-xs btn-dark mb-0">Manage</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="ms-3 text-xs font-weight-bold">14</span>
+                                                </td>
+                                                <td class="d-flex justify-content-center align-items-center">
+                                                    <div class="px-2" style="width: 300px;">
+                                                        <img src="../images/team-3.jpg" class="w-100 rounded"
+                                                            alt="Product">
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="badge badge-sm bg-danger">Advanced</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="text-xs font-weight-bold">Shoulder</span>
                                                 </td>
                                                 <td class="text-center">
                                                     <button class="me-2 btn btn-xs btn-dark mb-0">Manage</button>
@@ -232,93 +280,54 @@
                     </div>
                 </div>
             </div>
-            <!-- Add Workout Plan -->
+            <!-- Add Exercises -->
             <div id="addProduct" style="display: none;">
                 <form>
                     <div class="row">
-                        <div class="col-12 d-flex justify-content-between align-items-center flex-wrap mb-2">
-                            <h3 class="text-light ms-2 font-weight-bolder">Add New Workout Plan</h3>
-                            <button class="btn btn-sm btn-dark mb-0 me-4" data-view-product>View All Workout
-                                Plans</button>
+                        <div class="col-12 d-flex justify-content-between align-items-center mb-2">
+                            <h3 class="text-light ms-2 font-weight-bolder">Add New Exercise</h3>
+                            <button class="btn btn-sm btn-dark mb-0 me-4" data-view-product>View All Exercises</button>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-12">
                             <div class="card">
                                 <div class="card-body mb-3">
-                                    <h6>Workout Plan Information</h6>
-                                    <div class="col-12 mb-3">
-                                        <label class="form-label-control">Plan Name</label>
-                                        <input type="text" class="form-control" placeholder="Workout Plan Name"
-                                            required>
-                                    </div>
-                                    <div class="col-12 mb-3">
-                                        <label class="form-label-control">Strength Level</label>
-                                        <input type="file" class="form-control" required>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-7">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="input-group">
-                                        <span class="input-group-text text-body"><i class="fas fa-search"
-                                                aria-hidden="true"></i></span>
-                                        <input type="text" class="form-control" placeholder="Search Exercises here...">
-                                    </div>
-                                    <div class="p-3">
-                                        <ul class="list-group">
-                                            <li
-                                                class="list-group-item border-0 d-flex justify-content-between flex-wrap ps-0 mb-2 border-radius-lg">
-                                                <div class="d-flex align-items-center">
-                                                    <div>
-                                                        <img src="../images/team-3.jpg" class="avatar-xxl rounded me-3"
-                                                            alt="Product">
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <h6 class="mb-1 text-dark text-sm">DUMBELL INCLINE BENCH PRESS
-                                                        </h6>
-                                                        <span class="text-xs">Shoulder</span>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex mt-3">
-                                                    <button class="btn btn-sm btn-primary my-auto">Add</button>
-                                                </div>
-                                            </li>
-                                            <li
-                                                class="list-group-item border-0 d-flex justify-content-between flex-wrap ps-0 mb-2 border-radius-lg">
-                                                <div class="d-flex align-items-center">
-                                                    <div>
-                                                        <img src="../images/team-3.jpg" class="avatar-xxl rounded me-3"
-                                                            alt="Product">
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <h6 class="mb-1 text-dark text-sm">DUMBELL INCLINE BENCH PRESS
-                                                        </h6>
-                                                        <span class="text-xs">Shoulder</span>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex mt-3">
-                                                    <button class="btn btn-sm btn-primary my-auto">Add</button>
-                                                </div>
-                                            </li>
-                                            <li
-                                                class="list-group-item border-0 d-flex justify-content-between flex-wrap ps-0 mb-2 border-radius-lg">
-                                                <div class="d-flex align-items-center">
-                                                    <div>
-                                                        <img src="../images/team-3.jpg" class="avatar-xxl rounded me-3"
-                                                            alt="Product">
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <h6 class="mb-1 text-dark text-sm">DUMBELL INCLINE BENCH PRESS
-                                                        </h6>
-                                                        <span class="text-xs">Shoulder</span>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex mt-3">
-                                                    <button class="btn btn-sm btn-primary my-auto">Add</button>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <div class="row">
+                                        <h6>Exercise Information</h6>
+                                        <div class="col-md-12 mb-3">
+                                            <label for="" class="form-label-control">Exercise
+                                                Name</label>
+                                            <input type="text" class="form-control" placeholder="Exercise Name"
+                                                required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="" class="form-label-control">Exercise
+                                                Type</label>
+                                            <select class="form-control">
+                                                <option value="">Chest</option>
+                                                <option value="">Back</option>
+                                                <option value="">Shoulder</option>
+                                                <option value="">Bicep</option>
+                                                <option value="">Tricep</option>
+                                                <option value="">Leg</option>
+                                                <option value="">Abs</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="" class="form-label-control">Difficulty
+                                                Level</label>
+                                            <select class="form-control">
+                                                <option value="">Begineer</option>
+                                                <option value="">Intermediate</option>
+                                                <option value="">Advanced</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <label for="" class="form-label-control">Image</label>
+                                            <input type="file" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="btn btn-sm btn-dark m-0">Add Exercise</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -327,7 +336,7 @@
                 </form>
             </div>
             <!-- Manage Exercises -->
-            <div id="manageProduct" style="display: none;">
+            <div id="manageProduct">
                 <form>
                     <div class="row">
                         <div class="col-12 d-flex justify-content-between align-items-center mb-3">
@@ -339,7 +348,8 @@
                                 <div class="card-body mb-3">
                                     <div class="col-12 mb-3">
                                         <div class="px-2" style="width: 300px;">
-                                            <img src="../images/team-3.jpg" class="w-100 rounded" alt="Product">
+                                            <img src="../images/team-3.jpg" class="w-100 rounded"
+                                                alt="Product">
                                         </div>
                                     </div>
                                     <div class="col-12 d-flex justify-content-between align-items-center flex-wrap">
