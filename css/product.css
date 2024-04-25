@@ -1,15 +1,15 @@
 *{
     margin:0%;
     padding: 0%;
-    font-family: "Poppins", sans-serif;
 }
 
 .card-product{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .left {
-    border: 1px solid black;
     max-width: 450px;
     max-height: 550px;
 }
@@ -20,12 +20,7 @@
 }
 
 .img {
-    /* margin-top: 17px; */
     max-width: 74px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center; */
 }
 
 .img img {
@@ -44,14 +39,6 @@
 
 .right p{
     text-align: justify;
-}
-
-.left img:hover {
-    box-shadow: 1px 1px 10px 4px;
-}
-
-.card-product .img img:hover{
-    box-shadow: 1px 1px 10px 4px;
 }
 
 /* Review */
@@ -233,4 +220,3 @@
     border-radius: 0;
     height: 0px;
 }
-
